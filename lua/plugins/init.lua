@@ -24,7 +24,9 @@ return {
 					"elixir",
 					"heex",
 					"javascript",
+					"typescript",
 					"html",
+					"tsx",
 				},
 				sync_install = false,
 				highlight = { enable = true },
@@ -71,5 +73,17 @@ return {
 		"williamboman/mason.nvim",
 		"williamboman/mason-lspconfig.nvim",
 		"neovim/nvim-lspconfig",
+	},
+	{
+		"windwp/nvim-ts-autotag",
+		ft = {
+			"javascript",
+			"javascriptreact",
+			"typescript",
+			"typescriptreact",
+		},
+		config = function()
+			require("nvim-ts-autotag").setup()
+		end,
 	},
 }
