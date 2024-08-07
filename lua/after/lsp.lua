@@ -48,3 +48,5 @@ require("lspconfig").tailwindcss.setup({})
 require("lspconfig").gopls.setup({})
 
 require("lspconfig").lua_ls.setup({})
+
+require("lspconfig").pyright.setup({})
