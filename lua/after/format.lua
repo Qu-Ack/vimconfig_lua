@@ -9,8 +9,8 @@ require("conform").setup({
 		html = { { "prettierd", "prettier" } },
 		go = { "gofmt" },
 		python = { "pyink" },
-		c = { "ast_grep" },
-		cpp = { "ast_grep" },
+		c = { "clang-format" },
+		cpp = { "clang-format" },
 	},
 })
 

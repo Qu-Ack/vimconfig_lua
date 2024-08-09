@@ -53,4 +53,38 @@ require("lspconfig").html.setup({})
 
 require("lspconfig").pyright.setup({})
 
-require("lspconfig").ast_grep.setup({})
+require("lspconfig").clangd.setup({
+	on_attach = lsp_zero.on_attach,
+	capabilities = {
+		textDocument = {
+			completion = {
+				completionItem = {
+					commitCharactersSupport = true,
+					deprecatedSupport = true,
+					insertReplaceSupport = true,
+					labelDetailsSupport = true,
+					preselectSupport = true,
+					resolveSupport = {
+						properties = { "documentation", "detail", "additionalTextEdits" },
+					},
+					snippetSupport = false,
+					tagSupport = {
+						valueSet = { 1 },
+					},
+				},
+			},
+		},
+	},
+	-- single_file_support = true,
+	-- root_dir = root_dir('c'),
+	filetyped = { "c", "cpp" },
+	cmd = {
+		"clangd",
+		"--enable-config",
+		-- "--clang-tidy",
+		-- "--all-scopes-completion=false",
+		"--background-index",
+		"--header-insertion=iwyu",
+		"--pch-storage=memory",
+	},
+})
