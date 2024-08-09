@@ -8,3 +8,4 @@ require("after.format")
 require("after.colorscheme")
 require("after.mason")
 require("after.lsp")
+
