@@ -8,6 +8,7 @@ require("conform").setup({
 		css = { { "prettierd", "prettier" } },
 		html = { { "prettierd", "prettier" } },
 		go = { "gofmt" },
+		python = { "pyink" },
 	},
 })
 

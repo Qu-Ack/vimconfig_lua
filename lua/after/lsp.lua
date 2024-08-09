@@ -49,6 +49,10 @@ require("lspconfig").gopls.setup({})
 
 require("lspconfig").lua_ls.setup({})
 
+<<<<<<< HEAD
 require("lspconfig").html.setup({})
 
 require("lspconfig").clangd.setup({})
+=======
+require("lspconfig").pyright.setup({})
+>>>>>>> 31f9386c9b2def58418552479d7ed65ef56ef322
