@@ -9,3 +9,6 @@ require("after.colorscheme")
 require("after.mason")
 require("after.lsp")
 
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.writebackup = false

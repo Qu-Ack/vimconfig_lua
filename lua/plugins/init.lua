@@ -103,4 +103,29 @@ return {
 			{ "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
 		},
 	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	},
+	{
+		"jose-elias-alvarez/null-ls.nvim",
+		ft = { "python" },
+		opts = function()
+			local nullls = require("null-ls")
+			local opts = {
+				sources = {
+					nullls.builtins.diagnostics.mypy,
+					nullls.builtins.diagnostics.ruff,
+				},
+			}
+		end,
+	},
+	{
+		"olrtg/nvim-emmet",
+		config = function()
+			vim.keymap.set({ "n", "v" }, "<leader>xe", require("nvim-emmet").wrap_with_abbreviation)
+		end,
+	},
 }
