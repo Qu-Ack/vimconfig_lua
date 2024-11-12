@@ -54,6 +54,9 @@ require("lspconfig").html.setup({})
 
 require("lspconfig").pyright.setup({})
 
+require("lspconfig").htmx.setup({})
+require("lspconfig").cssls.setup({})
+
 require("lspconfig").clangd.setup({
 	on_attach = lsp_zero.on_attach,
 	capabilities = {
@@ -82,7 +85,7 @@ require("lspconfig").clangd.setup({
 	cmd = {
 		"clangd",
 		"--enable-config",
-		-- "--clang-tidy",
+		"--clang-tidy",
 		-- "--all-scopes-completion=false",
 		"--background-index",
 		"--header-insertion=iwyu",
